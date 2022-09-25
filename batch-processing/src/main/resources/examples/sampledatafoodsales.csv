@@ -1,0 +1,245 @@
+﻿OrderDate,City,Product,UnitPrice
+1/1/2020,Boston,Carrot,1.77
+1/4/2020,Boston,Whole Wheat,3.49
+1/7/2020,Los Angeles,Chocolate Chip,1.87
+1/10/2020,New York,Chocolate Chip,1.87
+1/13/2020,Boston,Arrowroot,2.18
+1/16/2020,Boston,Carrot,1.77
+1/19/2020,Boston,Whole Wheat,3.49
+1/22/2020,Los Angeles,Carrot,1.77
+1/25/2020,New York,Carrot,1.77
+1/28/2020,New York,Potato Chips,1.35
+1/31/2020,Boston,Arrowroot,2.18
+2/3/2020,Boston,Chocolate Chip,1.87
+2/6/2020,Boston,Whole Wheat,3.49
+2/9/2020,Los Angeles,Carrot,1.77
+2/12/2020,New York,Carrot,1.77
+2/15/2020,New York,Potato Chips,1.35
+2/18/2020,Boston,Arrowroot,2.18
+2/21/2020,Boston,Oatmeal Raisin,2.84
+2/24/2020,Los Angeles,Bran,1.87
+2/27/2020,Los Angeles,Oatmeal Raisin,2.84
+3/2/2020,New York,Chocolate Chip,1.87
+3/5/2020,San Diego,Oatmeal Raisin,2.84
+3/8/2020,Boston,Carrot,1.77
+3/11/2020,Boston,Whole Wheat,3.49
+3/14/2020,Los Angeles,Chocolate Chip,1.87
+3/17/2020,New York,Carrot,1.77
+3/20/2020,New York,Potato Chips,1.68
+3/23/2020,San Diego,Chocolate Chip,1.87
+3/26/2020,Boston,Bran,1.87
+3/29/2020,Boston,Oatmeal Raisin,2.84
+4/1/2020,Los Angeles,Carrot,1.77
+4/4/2020,Los Angeles,Potato Chips,1.68
+4/7/2020,New York,Carrot,1.77
+4/10/2020,New York,Whole Wheat,3.49
+4/13/2020,San Diego,Potato Chips,1.68
+4/16/2020,Boston,Carrot,1.77
+4/19/2020,Boston,Potato Chips,1.68
+4/22/2020,Los Angeles,Carrot,1.77
+4/25/2020,New York,Carrot,1.77
+4/28/2020,New York,Potato Chips,1.68
+5/1/2020,San Diego,Chocolate Chip,1.87
+5/4/2020,Boston,Bran,1.87
+5/7/2020,Boston,Oatmeal Raisin,2.84
+5/10/2020,Los Angeles,Carrot,1.77
+5/13/2020,Los Angeles,Whole Wheat,3.49
+5/16/2020,New York,Carrot,1.77
+5/19/2020,New York,Potato Chips,1.68
+5/22/2020,San Diego,Chocolate Chip,1.87
+5/25/2020,Boston,Arrowroot,2.18
+5/28/2020,Boston,Carrot,1.77
+5/31/2020,Boston,Whole Wheat,3.49
+6/3/2020,Los Angeles,Oatmeal Raisin,2.84
+6/6/2020,New York,Chocolate Chip,1.87
+6/9/2020,San Diego,Carrot,1.77
+6/12/2020,San Diego,Whole Wheat,3.49
+6/15/2020,Boston,Carrot,1.77
+6/18/2020,Boston,Whole Wheat,3.49
+6/21/2020,Los Angeles,Carrot,1.77
+6/24/2020,Los Angeles,Potato Chips,1.68
+6/27/2020,New York,Bran,1.87
+6/30/2020,New York,Oatmeal Raisin,2.84
+7/3/2020,San Diego,Carrot,1.77
+7/6/2020,San Diego,Whole Wheat,3.49
+7/9/2020,Boston,Carrot,1.77
+7/12/2020,Boston,Whole Wheat,3.49
+7/15/2020,Los Angeles,Chocolate Chip,1.87
+7/18/2020,New York,Bran,1.87
+7/21/2020,New York,Oatmeal Raisin,2.84
+7/24/2020,San Diego,Bran,1.87
+7/27/2020,San Diego,Potato Chips,1.68
+7/30/2020,Boston,Bran,1.87
+8/2/2020,Boston,Oatmeal Raisin,2.84
+8/5/2020,Los Angeles,Chocolate Chip,1.87
+8/8/2020,New York,Carrot,1.77
+8/11/2020,New York,Whole Wheat,3.49
+8/14/2020,San Diego,Chocolate Chip,1.87
+8/17/2020,Boston,Arrowroot,2.18
+8/20/2020,Boston,Carrot,1.77
+8/23/2020,Boston,Whole Wheat,3.49
+8/26/2020,Los Angeles,Chocolate Chip,1.87
+8/29/2020,New York,Bran,1.87
+9/1/2020,New York,Oatmeal Raisin,2.84
+9/4/2020,San Diego,Carrot,1.77
+9/7/2020,Boston,Arrowroot,2.18
+9/10/2020,Boston,Carrot,1.77
+9/13/2020,Boston,Pretzels,3.15
+9/16/2020,Los Angeles,Carrot,1.77
+9/19/2020,New York,Arrowroot,2.18
+9/22/2020,New York,Chocolate Chip,1.87
+9/25/2020,San Diego,Bran,1.87
+9/28/2020,Boston,Arrowroot,2.18
+10/1/2020,Boston,Carrot,1.77
+10/4/2020,Boston,Whole Wheat,3.49
+10/7/2020,Los Angeles,Carrot,1.77
+10/10/2020,Los Angeles,Potato Chips,1.68
+10/13/2020,New York,Arrowroot,2.18
+10/16/2020,New York,Carrot,1.77
+10/19/2020,New York,Whole Wheat,3.49
+10/22/2020,San Diego,Carrot,1.77
+10/25/2020,Boston,Arrowroot,2.18
+10/28/2020,Boston,Chocolate Chip,1.87
+10/31/2020,Boston,Whole Wheat,3.49
+11/3/2020,Los Angeles,Carrot,1.77
+11/6/2020,Los Angeles,Potato Chips,1.68
+11/9/2020,New York,Carrot,1.77
+11/12/2020,San Diego,Arrowroot,2.18
+11/15/2020,San Diego,Oatmeal Raisin,2.84
+11/18/2020,Boston,Bran,1.87
+11/21/2020,Boston,Oatmeal Raisin,2.84
+11/24/2020,Los Angeles,Carrot,1.77
+11/27/2020,Los Angeles,Potato Chips,1.68
+11/30/2020,New York,Carrot,1.77
+12/3/2020,San Diego,Arrowroot,2.18
+12/6/2020,San Diego,Oatmeal Raisin,2.84
+12/9/2020,Boston,Banana,2.27
+12/12/2020,Boston,Chocolate Chip,1.87
+12/15/2020,Boston,Whole Wheat,3.49
+12/18/2020,Los Angeles,Carrot,1.77
+12/21/2020,Los Angeles,Potato Chips,1.68
+12/24/2020,New York,Arrowroot,2.18
+12/27/2020,New York,Chocolate Chip,1.87
+12/30/2020,San Diego,Arrowroot,2.18
+1/2/2021,Boston,Arrowroot,2.18
+1/5/2021,Boston,Carrot,1.77
+1/8/2021,Boston,Pretzels,3.15
+1/11/2021,Los Angeles,Bran,1.87
+1/14/2021,Los Angeles,Oatmeal Raisin,2.84
+1/17/2021,New York,Carrot,1.77
+1/20/2021,New York,Whole Wheat,3.49
+1/23/2021,San Diego,Carrot,1.77
+1/26/2021,Boston,Arrowroot,2.18
+1/29/2021,Boston,Carrot,1.77
+2/1/2021,Boston,Potato Chips,1.68
+2/4/2021,Los Angeles,Arrowroot,2.18
+2/7/2021,Los Angeles,Chocolate Chip,1.87
+2/10/2021,New York,Carrot,1.77
+2/13/2021,New York,Potato Chips,1.68
+2/16/2021,San Diego,Oatmeal Raisin,2.84
+2/19/2021,Boston,Carrot,1.77
+2/22/2021,Boston,Pretzels,3.15
+2/25/2021,Los Angeles,Arrowroot,2.18
+2/28/2021,Los Angeles,Chocolate Chip,1.87
+3/2/2021,New York,Bran,1.87
+3/5/2021,New York,Oatmeal Raisin,2.84
+3/8/2021,San Diego,Bran,1.87
+3/11/2021,San Diego,Potato Chips,1.68
+3/14/2021,Boston,Carrot,1.77
+3/17/2021,Boston,Potato Chips,1.68
+3/20/2021,Los Angeles,Carrot,1.77
+3/23/2021,Los Angeles,Potato Chips,1.68
+3/26/2021,New York,Bran,1.87
+3/29/2021,New York,Oatmeal Raisin,2.84
+4/1/2021,San Diego,Carrot,1.77
+4/4/2021,Boston,Arrowroot,2.18
+4/7/2021,Boston,Oatmeal Raisin,2.84
+4/10/2021,Los Angeles,Carrot,1.77
+4/13/2021,Los Angeles,Whole Wheat,3.49
+4/16/2021,New York,Carrot,1.77
+4/19/2021,New York,Potato Chips,1.68
+4/22/2021,San Diego,Chocolate Chip,1.87
+4/25/2021,Boston,Bran,1.87
+4/28/2021,Boston,Oatmeal Raisin,2.84
+5/1/2021,Los Angeles,Arrowroot,2.18
+5/4/2021,Los Angeles,Chocolate Chip,1.87
+5/7/2021,New York,Bran,1.87
+5/10/2021,New York,Oatmeal Raisin,2.84
+5/13/2021,San Diego,Chocolate Chip,1.87
+5/16/2021,Boston,Carrot,1.77
+5/19/2021,Boston,Pretzels,3.15
+5/22/2021,Los Angeles,Chocolate Chip,1.87
+5/25/2021,New York,Carrot,1.77
+5/28/2021,San Diego,Arrowroot,2.18
+5/31/2021,San Diego,Oatmeal Raisin,2.84
+6/3/2021,Boston,Bran,1.87
+6/6/2021,Boston,Oatmeal Raisin,2.84
+6/9/2021,Boston,Whole Wheat,3.49
+6/12/2021,Los Angeles,Carrot,1.77
+6/15/2021,New York,Bran,1.87
+6/18/2021,New York,Oatmeal Raisin,2.84
+6/21/2021,San Diego,Carrot,1.77
+6/24/2021,Boston,Banana,2.27
+6/27/2021,Boston,Chocolate Chip,1.87
+6/30/2021,Boston,Whole Wheat,3.49
+7/3/2021,Los Angeles,Bran,1.87
+7/6/2021,Los Angeles,Oatmeal Raisin,2.84
+7/9/2021,New York,Arrowroot,2.18
+7/12/2021,New York,Chocolate Chip,1.87
+7/15/2021,San Diego,Bran,1.87
+7/18/2021,Boston,Banana,2.27
+7/21/2021,Boston,Chocolate Chip,1.87
+7/24/2021,Boston,Whole Wheat,3.49
+7/27/2021,Los Angeles,Arrowroot,2.18
+7/30/2021,Los Angeles,Chocolate Chip,1.87
+8/2/2021,New York,Carrot,1.77
+8/5/2021,San Diego,Arrowroot,2.18
+8/8/2021,San Diego,Oatmeal Raisin,2.84
+8/11/2021,Boston,Carrot,1.77
+8/14/2021,Boston,Pretzels,3.15
+8/17/2021,Los Angeles,Carrot,1.77
+8/20/2021,New York,Bran,1.87
+8/23/2021,New York,Oatmeal Raisin,2.84
+8/26/2021,San Diego,Carrot,1.77
+8/29/2021,Boston,Arrowroot,2.18
+9/1/2021,Boston,Carrot,1.77
+9/4/2021,Boston,Pretzels,3.15
+9/7/2021,Los Angeles,Bran,1.87
+9/10/2021,Los Angeles,Oatmeal Raisin,2.84
+9/13/2021,New York,Carrot,1.77
+9/16/2021,New York,Potato Chips,1.68
+9/19/2021,San Diego,Carrot,1.77
+9/22/2021,Boston,Arrowroot,2.18
+9/25/2021,Boston,Carrot,1.77
+9/28/2021,Boston,Pretzels,3.15
+10/1/2021,Los Angeles,Bran,1.87
+10/4/2021,Los Angeles,Oatmeal Raisin,2.84
+10/7/2021,New York,Arrowroot,2.18
+10/10/2021,New York,Chocolate Chip,1.87
+10/13/2021,San Diego,Carrot,1.77
+10/16/2021,Boston,Arrowroot,2.18
+10/19/2021,Boston,Carrot,1.77
+10/22/2021,Boston,Whole Wheat,3.49
+10/25/2021,Los Angeles,Carrot,1.77
+10/28/2021,New York,Bran,1.87
+10/31/2021,New York,Potato Chips,1.68
+11/3/2021,San Diego,Chocolate Chip,1.87
+11/6/2021,Boston,Bran,1.87
+11/9/2021,Boston,Oatmeal Raisin,2.84
+11/12/2021,Los Angeles,Carrot,1.77
+11/15/2021,New York,Arrowroot,2.18
+11/18/2021,New York,Chocolate Chip,1.87
+11/21/2021,San Diego,Carrot,1.77
+11/24/2021,Boston,Arrowroot,2.18
+11/27/2021,Boston,Chocolate Chip,1.87
+11/30/2021,Boston,Whole Wheat,3.49
+12/3/2021,Los Angeles,Bran,1.87
+12/6/2021,Los Angeles,Oatmeal Raisin,2.84
+12/9/2021,New York,Carrot,1.77
+12/12/2021,New York,Whole Wheat,3.49
+12/15/2021,San Diego,Chocolate Chip,1.87
+12/18/2021,Boston,Arrowroot,2.18
+12/21/2021,Boston,Chocolate Chip,1.87
+12/24/2021,Boston,Whole Wheat,3.49
+12/27/2021,Los Angeles,Bran,1.87
+12/30/2021,Los Angeles,Oatmeal Raisin,2.84
