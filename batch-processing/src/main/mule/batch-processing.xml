@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns:file="http://www.mulesoft.org/schema/mule/file"
+	xmlns:batch="http://www.mulesoft.org/schema/mule/batch" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/batch/current/mule-batch.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
+	<db:config name="Database_Config" doc:name="Database Config" doc:id="4092105a-59d3-4a0d-9354-3b668ec195bb" >
+		<db:my-sql-connection host="localhost" port="3306" user="root" password="181057" database="deloitte" />
+	</db:config>
+	<flow name="batch-processingFlow" doc:id="1aa6e895-93e2-45c5-8eca-ec8be0cec867" >
+		<file:listener doc:name="On New or Updated File" doc:id="9c209de2-5afe-437e-8082-f48dc17e1911" directory="C:\Users\BHEKARTHIK\Mule\sampleinput" autoDelete="true">
+			<scheduling-strategy >
+				<fixed-frequency frequency="5" timeUnit="SECONDS"/>
+			</scheduling-strategy>
+			<file:matcher filenamePattern="*.csv" />
+		</file:listener>
+		<ee:transform doc:name="Transform Message" doc:id="bcd53c43-0503-4729-acaa-5ae9fd8ebc99">
+						<ee:message>
+							<ee:set-payload><![CDATA[%dw 2.0
+output application/java
+---
+payload map ( payload01 , indexOfPayload01 ) -> {
+	OrderDate: payload01.OrderDate,
+	City: payload01.City,
+	Product: payload01.Product,
+	UnitPrice: payload01.UnitPrice as Number
+}]]></ee:set-payload>
+						</ee:message>
+					</ee:transform>
+		<batch:job jobName="batch-processingBatch_Job" doc:id="f7eec76e-5cf3-4e7a-afb7-720d49bd2fc9" maxFailedRecords="-1">
+			<batch:process-records >
+				<batch:step name="Batch_Step_All" doc:id="8bd48094-648f-48bd-953e-517bf4dc81ff" >
+					<batch:aggregator doc:name="Batch Aggregator" doc:id="4775e840-455e-4431-9e2e-17c4ecd6b3e2" size="10">
+						<db:bulk-insert doc:name="Bulk insert" doc:id="cdcf06e2-23e9-4ce8-9f6b-24a286e4a9c0" config-ref="Database_Config">
+							<db:sql ><![CDATA[insert into payments(OrderDate,City,Product,UnitPrice) values(:OrderDate,:City,:Product,:UnitPrice)]]></db:sql>
+						</db:bulk-insert>
+					</batch:aggregator>
+					<choice doc:name="Choice" doc:id="2050707c-52d7-4441-8c97-677b94ffc7fe">
+						<when expression="#[payload.UnitPrice &gt; 3]">
+							<raise-error doc:name="Raise error" doc:id="85508f65-8446-4fa6-aadd-745bdd4dfd9a" type="BATCH:PRICE_ERROR" />
+						</when>
+						<otherwise>
+							<logger level="INFO" doc:name="Logger" doc:id="0b38eb98-8784-474c-9e9d-3dca2297c5b6" message="processing #[payload]" />
+						</otherwise>
+					</choice>
+				</batch:step>
+				<batch:step name="Batch_Step_Failed" doc:id="9ecf51aa-fc4a-4d55-abd0-d96a1cb0335c" acceptPolicy="ONLY_FAILURES">
+					<logger level="INFO" doc:name="Logger" doc:id="772e9e16-5266-4a77-b3a3-8f4314644f9a" message="failed record found #[payload]"/>
+					<batch:aggregator doc:name="Batch Aggregator" doc:id="fea86980-d29d-4e40-9e35-012893a405bb" streaming="true">
+						<ee:transform doc:name="Transform Message" doc:id="5acd49a9-8a8c-4795-a836-fa374097fd3c">
+						<ee:message>
+							<ee:set-payload><![CDATA[%dw 2.0
+output application/csv
+---
+
+payload map ( payload01 , indexOfPayload01 ) -> {
+	OrderDate: payload01.OrderDate,
+	City: payload01.City,
+	Product: payload01.Product,
+	UnitPrice: payload01.UnitPrice as String
+}
+]]></ee:set-payload>
+						</ee:message>
+					</ee:transform>
+						<file:write doc:name="Write" doc:id="d0ab0cb9-3fcc-4de0-957a-6f8bbe9cb8f0" path='#["C:/Users/BHEKARTHIK/Mule/sampleoutput/failure-" ++ now().milliseconds ++ ".csv"]'/>
+					</batch:aggregator>
+				</batch:step>
+			</batch:process-records>
+			<batch:on-complete >
+				<logger level="INFO" doc:name="Logger" doc:id="ff256342-a8f7-4647-9a43-d317f58c0ea6" message="Batch Processing Complete."/>
+			</batch:on-complete>
+		</batch:job>
+	</flow>
+</mule>

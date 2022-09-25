@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="csv" format="csv">
+      <types:shape format="weave" example="examples/sampledatafoodsales.csv"><![CDATA[%dw 2.0
+
+type csv = Array<{|  "﻿OrderDate": String,   City: String,   Product: String,   UnitPrice: String|}> {"isQuotedString": "false",
+"header": "true",
+"headerLineNumber": "0",
+"separator": ","}
+
+]]></types:shape>
+      <types:properties>
+        <types:property name="headerLineNumber" value="0"/>
+        <types:property name="header" value="true"/>
+        <types:property name="isQuotedString" value="false"/>
+        <types:property name="separator" value=","/>
+      </types:properties>
+    </types:type>
+    <types:type name="json" format="json">
+      <types:shape format="weave" example="examples/product.json"><![CDATA[%dw 2.0
+
+type json = Array<{|  OrderDate: String,   City: String,   Product: String,   UnitPrice: Number {"typeId": "double"}|}> {"example": "[{\\\"OrderDate\\\":\\\"Karthik\\\",\\\"City\\\":\\\"Boston\\\",\\\"Product\\\":\\\"Male\\\",\\\"UnitPrice\\\":12.34}]"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#bcd53c43-0503-4729-acaa-5ae9fd8ebc99">
+    <types:processor-declaration>
+      <types:input-event>
+        <types:message>
+          <types:payload type="csv"/>
+        </types:message>
+      </types:input-event>
+      <types:output-event>
+        <types:message>
+          <types:payload type="json"/>
+        </types:message>
+      </types:output-event>
+    </types:processor-declaration>
+  </types:enrichment>
+  <types:enrichment select="#5acd49a9-8a8c-4795-a836-fa374097fd3c">
+    <types:processor-declaration>
+      <types:output-event>
+        <types:message>
+          <types:payload type="csv"/>
+        </types:message>
+      </types:output-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>
